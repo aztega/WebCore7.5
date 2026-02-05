@@ -29,9 +29,14 @@
 }
 
 body {
-  max-width: 320px;
+  width: 320px;
   background-color: #F8F8F8;
   font-family: "TTLakes";
+}
+
+.container {
+  width: 100%;
+  margin: 0px auto;
 }
 
 .swiper {
