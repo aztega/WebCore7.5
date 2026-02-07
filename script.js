@@ -8,4 +8,9 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-pagination',
   },
 
+  breakpoints: {
+    768: {
+      enabled: false,
+    }
+  }
 });
