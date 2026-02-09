@@ -35,6 +35,7 @@ body {
   .container {
   max-width: 1120px;
   margin: 0 auto;
+  display: relative;
 }
 
 .swiper {
@@ -43,9 +44,9 @@ body {
 
 .swiper-wrapper {
   display: grid;
-  grid-template-columns: repeat(4, minmax(240px, 1fr));
-  grid-template-rows: repeat(3, minmax(72px, 1fr));
+ grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
 
 .swiper-slide {
   display: flex;
@@ -68,16 +69,44 @@ h1 {
   text-transform:uppercase;
 }
 
+.hide-button, .show-button {
+  display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-top: 24x;
+ margin-left: 6px;
+}
+
+
+button {
+  border: none;
+  padding: 10px;
+background: none;
+font-family: inherit;
+font-weight: 500;
+cursor: pointer;
+}
+
+.hide{
+  display: none;
+}
+
+
+
 @media (max-width: 768px) {
 .container {
   width: 90%;
   margin: auto;
 }
 
+ul.swiper-wrapper {
+  justify-content: center;
+  align-items: center;
+}
+
 .swiper-wrapper {
- display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  grid-template-rows: repeat(3, minmax(72px, 1fr));
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .swiper-slide {
@@ -110,8 +139,8 @@ ul li {
  list-style: none;
 }
 
-button {
-  display: none;
+.hide-button, .show-button{
+ display: none;
 }
 }
 
