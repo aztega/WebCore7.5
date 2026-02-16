@@ -1,146 +1,117 @@
 @font-face {
   font-family: "TTLakes";
-  src: url("./fonts/TTLakes-Regular.woff")
-    format("woff");
+  src: url("./fonts/TTLakes-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "TTLakes";
-  src: url("./fonts/TTLakes-Medium.woff")
-    format("woff");
+  src: url("./fonts/TTLakes-Medium.woff") format("woff");
   font-weight: 500;
   font-style: medium;
 }
 
 @font-face {
   font-family: "TTLakes";
-  src: url("./fonts/TTLakes-Bold.woff")
-    format("woff");
+  src: url("./fonts/TTLakes-Bold.woff") format("woff");
   font-weight: 700;
   font-style: bold;
 }
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+html,
+body {
+  width: 320px;
+  height: 100%;
+  margin: auto;
 }
 
 body {
-  background-color: #F8F8F8;
   font-family: "TTLakes";
-}
-  .container {
-  max-width: 1120px;
-  margin: 0 auto;
-  display: relative;
-}
-
-.swiper {
-   margin: 16px auto;
-}
-
-.swiper-wrapper {
-  display: grid;
- grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-
-.swiper-slide {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
- max-width: 240px;
- max-height: 72px;
-   border-radius: 10px;
-   padding: 16px;
-   margin: 10px;
-   background-color: #fff;
-   border: solid 1px #EAEAEA;
+  font-size: 14px;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-  margin: 16px 16px 0px 16px;
-  color: #7E7E82;
-  font-weight: 400;
+  color: #7e7e82;
   font-size: 16px;
-  text-transform:uppercase;
+  font-weight: 400;
+  padding: 5px;
 }
 
-.hide-button, .show-button {
+.swiper {
+  width: auto;
+  height: auto;
+}
+
+.swiper-slide {
+  max-width: 240px;
+  height: 72px;
+  margin: 10px 0px 30px 0px;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
   display: flex;
- justify-content: center;
- align-items: center;
- margin-top: 24x;
- margin-left: 6px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border: solid 1px #eaeaea;
 }
 
+.swiper-slide img {
+  margin: 10px;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 button {
   border: none;
   padding: 10px;
-background: none;
-font-family: inherit;
-font-weight: 500;
-cursor: pointer;
-}
-
-.hide{
+  background: none;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
   display: none;
 }
 
-
-
-@media (max-width: 768px) {
-.container {
-  width: 90%;
-  margin: auto;
+.hide {
+  display: none;
 }
 
-ul.swiper-wrapper {
-  justify-content: center;
-  align-items: center;
+@media (min-width: 768px) {
+  html,
+  body {
+    width: 768px;
+    margin: auto;
+  }
+
+  .swiper-wrapper {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  button {
+    display: flex;
+  }
 }
 
-.swiper-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
+@media (min-width: 1120px) {
+  html,
+  body {
+    width: 1120px;
+    margin: auto;
+  }
 
-.swiper-slide {
-  max-width: 224px;
+  .swiper-wrapper {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  button {
+    display: flex;
+  }
 }
-
-}
-
-@media (max-width: 320px) {
-.container {
-  width: 320px;
-  margin: auto;
-}
-
-.swiper-wrapper {
- margin: 16px auto;
- 
-}
-
-.swiper-wrapper {
- display: flex;
-}
-
-.swiper-pagination {
-  margin-top: 16px;
-
-}
-
-ul li {
- list-style: none;
-}
-
-.hide-button, .show-button{
- display: none;
-}
-}
-

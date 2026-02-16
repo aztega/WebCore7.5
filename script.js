@@ -1,22 +1,22 @@
-const swiper = new Swiper('.swiper', {
-  direction: 'horizontal',
-  loop: true,
 
-
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-  },
-  
-
-  breakpoints: {
-    320: {
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1.2,
+        spaceBetween: 20,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        
+          breakpoints: {
+    768: {
       enabled: false,
     }
   }
-});
+        
+      });
 
-const showBtn = document.getElementById('showButton');
+      const showBtn = document.getElementById('showButton');
 const hideBtn = document.getElementById('hideButton');
 const bottomItems = document.querySelectorAll('.hide');
 
@@ -33,10 +33,6 @@ function hideBottomGrid(show) {
   hideBtn.style.display = show ? 'flex' : 'none';
 }
 
+swiper.update();
 showBtn.addEventListener('click', () => hideBottomGrid(true));
 hideBtn.addEventListener('click', () => hideBottomGrid(false));
-
-
-
-
- 
