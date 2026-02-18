@@ -40,11 +40,6 @@ h1 {
   padding: 5px;
 }
 
-.swiper {
-  width: auto;
-  height: auto;
-}
-
 .swiper-slide {
   max-width: 240px;
   height: 72px;
@@ -78,6 +73,11 @@ button {
   display: none;
 }
 
+.showbutton,
+.hidebutton {
+  display: none;
+}
+
 .hide {
   display: none;
 }
@@ -97,6 +97,10 @@ button {
   button {
     display: flex;
   }
+  .swiper {
+    width: auto;
+    height: 200px;
+  }
 }
 
 @media (min-width: 1120px) {
@@ -113,5 +117,9 @@ button {
   }
   button {
     display: flex;
+  }
+  .swiper {
+    width: auto;
+    height: 200px;
   }
 }
